@@ -3,9 +3,9 @@ package com.joaocdfarias.creditanalysis.service.strategy.impl;
 import java.util.Random;
 
 import com.joaocdfarias.creditanalysis.domain.Proposal;
-import com.joaocdfarias.creditanalysis.service.strategy.CalculatePoint;
+import com.joaocdfarias.creditanalysis.service.strategy.CalculateScore;
 
-public class ScoreImpl implements CalculatePoint {
+public class ScoreImpl implements CalculateScore {
 
   private Random random = new Random();
 

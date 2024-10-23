@@ -1,9 +1,9 @@
 package com.joaocdfarias.creditanalysis.service.strategy.impl;
 
 import com.joaocdfarias.creditanalysis.domain.Proposal;
-import com.joaocdfarias.creditanalysis.service.strategy.CalculatePoint;
+import com.joaocdfarias.creditanalysis.service.strategy.CalculateScore;
 
-public class PaymentDeadlineInTenYearsImpl implements CalculatePoint {
+public class PaymentDeadlineInTenYearsImpl implements CalculateScore {
 
   @Override
   public int calculate(Proposal proposal) {
