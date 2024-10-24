@@ -5,7 +5,9 @@ import java.util.Random;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import com.joaocdfarias.creditanalysis.constants.MessageConstant;
 import com.joaocdfarias.creditanalysis.domain.Proposal;
+import com.joaocdfarias.creditanalysis.exceptions.StrategyException;
 import com.joaocdfarias.creditanalysis.service.strategy.CalculateScore;
 
 @Order(1)
@@ -17,7 +19,7 @@ public class BadScoreImpl implements CalculateScore {
   @Override
   public int calculate(Proposal proposal) {
     if (hasBadCredit()) {
-      throw new RuntimeException("Bad credit");
+      throw new StrategyException(String.format(MessageConstant.BAD_SCORE, proposal.getUser().getName()));
     }
 
     return 100;
