@@ -2,11 +2,13 @@ package com.joaocdfarias.creditanalysis.service.strategy.impl;
 
 import java.util.Random;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import com.joaocdfarias.creditanalysis.domain.Proposal;
 import com.joaocdfarias.creditanalysis.service.strategy.CalculateScore;
 
+@Order(2)
 @Component
 public class ScoreImpl implements CalculateScore {
 

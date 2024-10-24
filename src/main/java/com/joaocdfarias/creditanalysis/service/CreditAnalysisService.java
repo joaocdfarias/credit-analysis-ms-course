@@ -17,6 +17,6 @@ public class CreditAnalysisService {
   }
 
   public void analyse(Proposal proposal) {
-    calculateScoreList.stream().mapToInt(impl -> impl.calculate(proposal));
+    int score = calculateScoreList.stream().mapToInt(impl -> impl.calculate(proposal)).sum();
   }
 }

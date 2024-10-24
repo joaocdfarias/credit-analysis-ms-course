@@ -21,9 +21,7 @@ public class CreditanalysisApplication {
 
 	@Bean
 	public CommandLineRunner commandLineRunner() {
-		return args -> {
-			creditAnalysisService.analyse();
-		};
+		return args -> creditAnalysisService.analyse(null);
 	}
 
 }
